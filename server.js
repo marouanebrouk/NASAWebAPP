@@ -29,3 +29,8 @@ mongoose.connect(MONGOURL).then(()=>{
 
 app.use("/api/auth",authRouter)
 
+app.get('/',(req,res)=>
+{
+    res.send("hello i am an api check /api/auth/(signin,signup,logout,fetch)");
+})
+
